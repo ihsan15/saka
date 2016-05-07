@@ -1,0 +1,6 @@
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\bin\SAKA.WCF.Service.dll.config
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\bin\SAKA.WCF.Service.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\bin\SAKA.WCF.Service.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\obj\Debug\SAKA.WCF.Service.csprojResolveAssemblyReference.cache
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\obj\Debug\SAKA.WCF.Service.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.WCF.Service\obj\Debug\SAKA.WCF.Service.pdb

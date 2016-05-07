@@ -1,0 +1,5 @@
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Bussiness\bin\Debug\SAKA.Bussiness.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Bussiness\bin\Debug\SAKA.Bussiness.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Bussiness\obj\Debug\SAKA.Bussiness.csprojResolveAssemblyReference.cache
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Bussiness\obj\Debug\SAKA.Bussiness.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Bussiness\obj\Debug\SAKA.Bussiness.pdb

@@ -1,0 +1,5 @@
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.DTO\bin\Debug\SAKA.DTO.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.DTO\bin\Debug\SAKA.DTO.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.DTO\obj\Debug\SAKA.DTO.csprojResolveAssemblyReference.cache
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.DTO\obj\Debug\SAKA.DTO.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.DTO\obj\Debug\SAKA.DTO.pdb

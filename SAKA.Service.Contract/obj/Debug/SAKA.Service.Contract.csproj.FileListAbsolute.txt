@@ -1,0 +1,5 @@
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Service.Contract\bin\Debug\SAKA.Service.Contract.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Service.Contract\bin\Debug\SAKA.Service.Contract.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Service.Contract\obj\Debug\SAKA.Service.Contract.csprojResolveAssemblyReference.cache
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Service.Contract\obj\Debug\SAKA.Service.Contract.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Service.Contract\obj\Debug\SAKA.Service.Contract.pdb
