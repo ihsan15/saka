@@ -18,3 +18,7 @@ C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\bin\Microsoft.CodeDom.Providers.
 C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\obj\Debug\SAKA.Web.UI.csprojResolveAssemblyReference.cache
 C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\obj\Debug\SAKA.Web.UI.dll
 C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\obj\Debug\SAKA.Web.UI.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\bin\SAKA.DTO.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\bin\SAKA.Service.Contract.dll
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\bin\SAKA.DTO.pdb
+C:\Users\ihsan\Desktop\Empatik\SAKA\SAKA.Web.UI\bin\SAKA.Service.Contract.pdb
