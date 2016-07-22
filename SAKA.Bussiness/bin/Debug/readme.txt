@@ -1,0 +1,2 @@
+SAKA.Calculator bin/Debug klasörüne kopyalanacak.
+SAKA.Calculator add reference denilerek, browse yapýlarak, bin/Debug klasöründeki kardelen.data.dll referans olarak eklenecek. Ayrýca system.configuration referans olarak eklenecek.

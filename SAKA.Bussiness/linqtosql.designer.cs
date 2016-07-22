@@ -30,15 +30,15 @@ namespace SAKA.Bussiness
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertKPI_Value(KPI_Value instance);
-    partial void UpdateKPI_Value(KPI_Value instance);
-    partial void DeleteKPI_Value(KPI_Value instance);
     partial void InsertKPI_Calculation_Log(KPI_Calculation_Log instance);
     partial void UpdateKPI_Calculation_Log(KPI_Calculation_Log instance);
     partial void DeleteKPI_Calculation_Log(KPI_Calculation_Log instance);
     partial void InsertKPI(KPI instance);
     partial void UpdateKPI(KPI instance);
     partial void DeleteKPI(KPI instance);
+    partial void InsertKPI_Value(KPI_Value instance);
+    partial void UpdateKPI_Value(KPI_Value instance);
+    partial void DeleteKPI_Value(KPI_Value instance);
     #endregion
 		
 		public linqtosqlDataContext() : 
@@ -71,14 +71,6 @@ namespace SAKA.Bussiness
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<KPI_Value> KPI_Values
-		{
-			get
-			{
-				return this.GetTable<KPI_Value>();
-			}
-		}
-		
 		public System.Data.Linq.Table<KPI_Calculation_Log> KPI_Calculation_Logs
 		{
 			get
@@ -94,251 +86,12 @@ namespace SAKA.Bussiness
 				return this.GetTable<KPI>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KPI_Value")]
-	public partial class KPI_Value : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private System.Guid _KPI_ID;
-		
-		private System.DateTime _Date;
-		
-		private string _Value;
-		
-		private decimal _Target;
-		
-		private decimal _Thresholder;
-		
-		private bool _Thresholder_Type;
-		
-		private System.DateTime _Creation_Date;
-		
-		private EntityRef<KPI> _KPI;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnKPI_IDChanging(System.Guid value);
-    partial void OnKPI_IDChanged();
-    partial void OnDateChanging(System.DateTime value);
-    partial void OnDateChanged();
-    partial void OnValueChanging(string value);
-    partial void OnValueChanged();
-    partial void OnTargetChanging(decimal value);
-    partial void OnTargetChanged();
-    partial void OnThresholderChanging(decimal value);
-    partial void OnThresholderChanged();
-    partial void OnThresholder_TypeChanging(bool value);
-    partial void OnThresholder_TypeChanged();
-    partial void OnCreation_DateChanging(System.DateTime value);
-    partial void OnCreation_DateChanged();
-    #endregion
-		
-		public KPI_Value()
-		{
-			this._KPI = default(EntityRef<KPI>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KPI_ID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
-		public System.Guid KPI_ID
+		public System.Data.Linq.Table<KPI_Value> KPI_Values
 		{
 			get
 			{
-				return this._KPI_ID;
-			}
-			set
-			{
-				if ((this._KPI_ID != value))
-				{
-					if (this._KPI.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnKPI_IDChanging(value);
-					this.SendPropertyChanging();
-					this._KPI_ID = value;
-					this.SendPropertyChanged("KPI_ID");
-					this.OnKPI_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date NOT NULL", IsPrimaryKey=true)]
-		public System.DateTime Date
-		{
-			get
-			{
-				return this._Date;
-			}
-			set
-			{
-				if ((this._Date != value))
-				{
-					this.OnDateChanging(value);
-					this.SendPropertyChanging();
-					this._Date = value;
-					this.SendPropertyChanged("Date");
-					this.OnDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Value
-		{
-			get
-			{
-				return this._Value;
-			}
-			set
-			{
-				if ((this._Value != value))
-				{
-					this.OnValueChanging(value);
-					this.SendPropertyChanging();
-					this._Value = value;
-					this.SendPropertyChanged("Value");
-					this.OnValueChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Target", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Target
-		{
-			get
-			{
-				return this._Target;
-			}
-			set
-			{
-				if ((this._Target != value))
-				{
-					this.OnTargetChanging(value);
-					this.SendPropertyChanging();
-					this._Target = value;
-					this.SendPropertyChanged("Target");
-					this.OnTargetChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder", DbType="Decimal(12,2) NOT NULL")]
-		public decimal Thresholder
-		{
-			get
-			{
-				return this._Thresholder;
-			}
-			set
-			{
-				if ((this._Thresholder != value))
-				{
-					this.OnThresholderChanging(value);
-					this.SendPropertyChanging();
-					this._Thresholder = value;
-					this.SendPropertyChanged("Thresholder");
-					this.OnThresholderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder_Type", DbType="Bit NOT NULL")]
-		public bool Thresholder_Type
-		{
-			get
-			{
-				return this._Thresholder_Type;
-			}
-			set
-			{
-				if ((this._Thresholder_Type != value))
-				{
-					this.OnThresholder_TypeChanging(value);
-					this.SendPropertyChanging();
-					this._Thresholder_Type = value;
-					this.SendPropertyChanged("Thresholder_Type");
-					this.OnThresholder_TypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creation_Date", DbType="Date NOT NULL")]
-		public System.DateTime Creation_Date
-		{
-			get
-			{
-				return this._Creation_Date;
-			}
-			set
-			{
-				if ((this._Creation_Date != value))
-				{
-					this.OnCreation_DateChanging(value);
-					this.SendPropertyChanging();
-					this._Creation_Date = value;
-					this.SendPropertyChanged("Creation_Date");
-					this.OnCreation_DateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI", ThisKey="KPI_ID", OtherKey="ID", IsForeignKey=true)]
-		public KPI KPI
-		{
-			get
-			{
-				return this._KPI.Entity;
-			}
-			set
-			{
-				KPI previousValue = this._KPI.Entity;
-				if (((previousValue != value) 
-							|| (this._KPI.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._KPI.Entity = null;
-						previousValue.KPI_Values.Remove(this);
-					}
-					this._KPI.Entity = value;
-					if ((value != null))
-					{
-						value.KPI_Values.Add(this);
-						this._KPI_ID = value.ID;
-					}
-					else
-					{
-						this._KPI_ID = default(System.Guid);
-					}
-					this.SendPropertyChanged("KPI");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<KPI_Value>();
 			}
 		}
 	}
@@ -568,9 +321,9 @@ namespace SAKA.Bussiness
 		
 		private System.Nullable<System.DateTime> _Modification_Date;
 		
-		private EntitySet<KPI_Value> _KPI_Values;
-		
 		private EntitySet<KPI_Calculation_Log> _KPI_Calculation_Logs;
+		
+		private EntitySet<KPI_Value> _KPI_Values;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -600,8 +353,8 @@ namespace SAKA.Bussiness
 		
 		public KPI()
 		{
-			this._KPI_Values = new EntitySet<KPI_Value>(new Action<KPI_Value>(this.attach_KPI_Values), new Action<KPI_Value>(this.detach_KPI_Values));
 			this._KPI_Calculation_Logs = new EntitySet<KPI_Calculation_Log>(new Action<KPI_Calculation_Log>(this.attach_KPI_Calculation_Logs), new Action<KPI_Calculation_Log>(this.detach_KPI_Calculation_Logs));
+			this._KPI_Values = new EntitySet<KPI_Value>(new Action<KPI_Value>(this.attach_KPI_Values), new Action<KPI_Value>(this.detach_KPI_Values));
 			OnCreated();
 		}
 		
@@ -805,19 +558,6 @@ namespace SAKA.Bussiness
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI_Values", ThisKey="ID", OtherKey="KPI_ID")]
-		public EntitySet<KPI_Value> KPI_Values
-		{
-			get
-			{
-				return this._KPI_Values;
-			}
-			set
-			{
-				this._KPI_Values.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Calculation_Log", Storage="_KPI_Calculation_Logs", ThisKey="ID", OtherKey="KPI_ID")]
 		public EntitySet<KPI_Calculation_Log> KPI_Calculation_Logs
 		{
@@ -828,6 +568,19 @@ namespace SAKA.Bussiness
 			set
 			{
 				this._KPI_Calculation_Logs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI_Values", ThisKey="ID", OtherKey="KPI_ID")]
+		public EntitySet<KPI_Value> KPI_Values
+		{
+			get
+			{
+				return this._KPI_Values;
+			}
+			set
+			{
+				this._KPI_Values.Assign(value);
 			}
 		}
 		
@@ -851,6 +604,18 @@ namespace SAKA.Bussiness
 			}
 		}
 		
+		private void attach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = this;
+		}
+		
+		private void detach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		{
+			this.SendPropertyChanging();
+			entity.KPI = null;
+		}
+		
 		private void attach_KPI_Values(KPI_Value entity)
 		{
 			this.SendPropertyChanging();
@@ -862,17 +627,228 @@ namespace SAKA.Bussiness
 			this.SendPropertyChanging();
 			entity.KPI = null;
 		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KPI_Value")]
+	public partial class KPI_Value : INotifyPropertyChanging, INotifyPropertyChanged
+	{
 		
-		private void attach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private System.Guid _KPI_ID;
+		
+		private System.DateTime _Date;
+		
+		private decimal _Value;
+		
+		private decimal _Target;
+		
+		private decimal _Thresholder;
+		
+		private bool _Thresholder_Type;
+		
+		private EntityRef<KPI> _KPI;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnKPI_IDChanging(System.Guid value);
+    partial void OnKPI_IDChanged();
+    partial void OnDateChanging(System.DateTime value);
+    partial void OnDateChanged();
+    partial void OnValueChanging(decimal value);
+    partial void OnValueChanged();
+    partial void OnTargetChanging(decimal value);
+    partial void OnTargetChanged();
+    partial void OnThresholderChanging(decimal value);
+    partial void OnThresholderChanged();
+    partial void OnThresholder_TypeChanging(bool value);
+    partial void OnThresholder_TypeChanged();
+    #endregion
+		
+		public KPI_Value()
 		{
-			this.SendPropertyChanging();
-			entity.KPI = this;
+			this._KPI = default(EntityRef<KPI>);
+			OnCreated();
 		}
 		
-		private void detach_KPI_Calculation_Logs(KPI_Calculation_Log entity)
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KPI_ID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
+		public System.Guid KPI_ID
 		{
-			this.SendPropertyChanging();
-			entity.KPI = null;
+			get
+			{
+				return this._KPI_ID;
+			}
+			set
+			{
+				if ((this._KPI_ID != value))
+				{
+					if (this._KPI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnKPI_IDChanging(value);
+					this.SendPropertyChanging();
+					this._KPI_ID = value;
+					this.SendPropertyChanged("KPI_ID");
+					this.OnKPI_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="Date NOT NULL", IsPrimaryKey=true)]
+		public System.DateTime Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this.OnValueChanging(value);
+					this.SendPropertyChanging();
+					this._Value = value;
+					this.SendPropertyChanged("Value");
+					this.OnValueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Target", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Target
+		{
+			get
+			{
+				return this._Target;
+			}
+			set
+			{
+				if ((this._Target != value))
+				{
+					this.OnTargetChanging(value);
+					this.SendPropertyChanging();
+					this._Target = value;
+					this.SendPropertyChanged("Target");
+					this.OnTargetChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder", DbType="Decimal(12,2) NOT NULL")]
+		public decimal Thresholder
+		{
+			get
+			{
+				return this._Thresholder;
+			}
+			set
+			{
+				if ((this._Thresholder != value))
+				{
+					this.OnThresholderChanging(value);
+					this.SendPropertyChanging();
+					this._Thresholder = value;
+					this.SendPropertyChanged("Thresholder");
+					this.OnThresholderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thresholder_Type", DbType="Bit NOT NULL")]
+		public bool Thresholder_Type
+		{
+			get
+			{
+				return this._Thresholder_Type;
+			}
+			set
+			{
+				if ((this._Thresholder_Type != value))
+				{
+					this.OnThresholder_TypeChanging(value);
+					this.SendPropertyChanging();
+					this._Thresholder_Type = value;
+					this.SendPropertyChanged("Thresholder_Type");
+					this.OnThresholder_TypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KPI_KPI_Value", Storage="_KPI", ThisKey="KPI_ID", OtherKey="ID", IsForeignKey=true)]
+		public KPI KPI
+		{
+			get
+			{
+				return this._KPI.Entity;
+			}
+			set
+			{
+				KPI previousValue = this._KPI.Entity;
+				if (((previousValue != value) 
+							|| (this._KPI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._KPI.Entity = null;
+						previousValue.KPI_Values.Remove(this);
+					}
+					this._KPI.Entity = value;
+					if ((value != null))
+					{
+						value.KPI_Values.Add(this);
+						this._KPI_ID = value.ID;
+					}
+					else
+					{
+						this._KPI_ID = default(System.Guid);
+					}
+					this.SendPropertyChanged("KPI");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

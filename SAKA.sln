@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAKA.Web.UI", "SAKA.Web.UI\SAKA.Web.UI.csproj", "{59C695D9-4C7E-4C9C-AC5F-BDF27F9B1F90}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAKA.Bussiness", "SAKA.Bussiness\SAKA.Bussiness.csproj", "{F9290E58-A807-4449-99F4-97A5E3F7D6E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAKA.Service.Contract", "SAKA.Service.Contract\SAKA.Service.Contract.csproj", "{772AF6C4-7B3F-4E7F-8407-B85FADE36154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAKA.WEB.UI.MVC", "SAKA.WEB.UI.MVC\SAKA.WEB.UI.MVC.csproj", "{10868D90-07C7-4226-8895-236ADDB1931C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{772AF6C4-7B3F-4E7F-8407-B85FADE36154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772AF6C4-7B3F-4E7F-8407-B85FADE36154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772AF6C4-7B3F-4E7F-8407-B85FADE36154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10868D90-07C7-4226-8895-236ADDB1931C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10868D90-07C7-4226-8895-236ADDB1931C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10868D90-07C7-4226-8895-236ADDB1931C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10868D90-07C7-4226-8895-236ADDB1931C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,62 @@
+﻿@model List<SAKA.WEB.UI.MVC.Models.ScoreModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <meta name="description" content="The description of my page" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover table-striped>
+                    <tr>
+                        <th class="alert-success>AD</th>
+                        <th class="alert-warning">VALUE</th>
+                        <th class="alert-info">TARİH</th>
+                        <th class="alert-link">STATU</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Value</td>
+                            <td>@item.Date</td>
+                            <td><img src="~/sekil/@item.Statu" alt="Alternate Text" /></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <div class="col-md-12">
+                @foreach (var item in ViewBag.GaugeList)
+                {
+                    <table width="400">
+                        <tr>
+                            <td colspan="3" style="padding-left:@(item.Value+"px")">V</td>
+                        </tr>
+                        <tr style="height:30px">
+                            <td style="background-color:@item.LeftColor; width:@(item.LeftSide+"px")"></td>
+                            <td style="background-color:yellow;width:@(item.Middle+"px")"></td>
+                            <td style="background-color:@item.RightColor; width:@(item.RightSide+"px")"></td>
+                        </tr>
+                        <tr><td colspan="3" align="center">@item.Name</td></tr>
+                    </table>
+                }
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+
+</html>

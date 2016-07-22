@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KPI" Class="linqtosqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=IHSAN-PC\MSSQLWISSENYAZ8;Initial Catalog=KPI;Integrated Security=True" SettingsObjectName="SAKA.Bussiness.Properties.Settings" SettingsPropertyName="KPIConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.KPI_Value" Member="KPI_Values">
-    <Type Name="KPI_Value">
-      <Column Name="KPI_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Value" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="Target" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Thresholder" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Thresholder_Type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Creation_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Association Name="KPI_KPI_Value" Member="KPI" ThisKey="KPI_ID" OtherKey="ID" Type="KPI" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.KPI_Calculation_Log" Member="KPI_Calculation_Logs">
     <Type Name="KPI_Calculation_Log">
       <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -34,8 +22,19 @@
       <Column Name="Direction" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Creation_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Modification_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Association Name="KPI_KPI_Value" Member="KPI_Values" ThisKey="ID" OtherKey="KPI_ID" Type="KPI_Value" />
       <Association Name="KPI_KPI_Calculation_Log" Member="KPI_Calculation_Logs" ThisKey="ID" OtherKey="KPI_ID" Type="KPI_Calculation_Log" />
+      <Association Name="KPI_KPI_Value" Member="KPI_Values" ThisKey="ID" OtherKey="KPI_ID" Type="KPI_Value" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KPI_Value" Member="KPI_Values">
+    <Type Name="KPI_Value">
+      <Column Name="KPI_ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Target" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Thresholder" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Thresholder_Type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="KPI_KPI_Value" Member="KPI" ThisKey="KPI_ID" OtherKey="ID" Type="KPI" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

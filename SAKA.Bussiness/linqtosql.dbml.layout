@@ -2,12 +2,6 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqtosql">
   <DataContextMoniker Name="/linqtosqlDataContext" />
   <nestedChildShapes>
-    <classShape Id="f42949e7-727f-493a-8a65-1088c91b48e7" absoluteBounds="3.5, 3.625, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/linqtosqlDataContext/KPI_Value" />
-      <nestedChildShapes>
-        <elementListCompartment Id="28e21c2c-dd45-4263-b4ef-5a7fa29b711d" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="68abbf50-f5f8-4a21-bb6e-d4e707134575" absoluteBounds="3.5, 1, 2, 1.7708968098958331">
       <DataClassMoniker Name="/linqtosqlDataContext/KPI_Calculation_Log" />
       <nestedChildShapes>
@@ -20,18 +14,24 @@
         <elementListCompartment Id="9a5f5567-b948-4840-b6f8-2ea7366ec4f8" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 4.36620198567708); (3.5 : 4.36620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/linqtosqlDataContext/KPI/KPI_KPI_Value" />
-      <nodes>
-        <classShapeMoniker Id="332f1e1f-516d-40af-81e4-0ce93e48b3f5" />
-        <classShapeMoniker Id="f42949e7-727f-493a-8a65-1088c91b48e7" />
-      </nodes>
-    </associationConnector>
     <associationConnector edgePoints="[(2.5 : 2.57294840494792); (3.5 : 2.57294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/linqtosqlDataContext/KPI/KPI_KPI_Calculation_Log" />
       <nodes>
         <classShapeMoniker Id="332f1e1f-516d-40af-81e4-0ce93e48b3f5" />
         <classShapeMoniker Id="68abbf50-f5f8-4a21-bb6e-d4e707134575" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4813c010-c1d5-4b23-8bb6-bc8e6e403cb3" absoluteBounds="3, 3.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqtosqlDataContext/KPI_Value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df288b2d-54bf-46ad-ab92-aafb2e57591a" absoluteBounds="3.015, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 4.24120198567708); (3 : 4.24120198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqtosqlDataContext/KPI/KPI_KPI_Value" />
+      <nodes>
+        <classShapeMoniker Id="332f1e1f-516d-40af-81e4-0ce93e48b3f5" />
+        <classShapeMoniker Id="4813c010-c1d5-4b23-8bb6-bc8e6e403cb3" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
